@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feliz aniversario</title>
+
+    <style>
+        body{
+            background-color: black ;
+        }
+
+     .painel{
+         margin: auto;
+         background-color: gray;
+         width: 500px;
+         height: 500px;
+         border-radius: 20px;
+         text-align: center;
+         padding-top: 50px;
+     }
+
+     #sim{
+       height: 50px;
+       width: 50px;
+       background-color: whitesmoke;
+       border: white;
+       border-radius: 10px;
+       color: black;
+       margin-left: -50px;
+
+       
+     }
+     #nao{
+       position: absolute;
+       height: 50px;
+       width: 50px;
+       background-color: whitesmoke;
+       border: white;
+       border-radius: 10px;
+       color: black;
+       margin-left: 70px;
+     }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="painel">
+        <h1> Feliz Aniversário</h1>
+
+        <img src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/09/quadrinho-de-batman.jpg?w=1200&h=675&crop=1" alt="" width="500" height="300" >
+
+        
+
+        <a href="https://www.youtube.com/watch?v=JAdHxTqAdCE&ab_channel=Deck"><button id="sim" > Sim! </button></a>
+        <button onmouseover="fuja()" id="nao"> Não! </button>
+        
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+
+        }
+    </script>
+    
+</body>
+</html>
